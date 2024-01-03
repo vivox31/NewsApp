@@ -1,12 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class NewsItem extends Component {
-  constructor(){
-    super();
-    
-  }
-  render() {
-    let {title , description , imageURL , newsUrl,author, date} = this.props;
+const NewsItem = (props)=> {
+ 
+
+    let {title , description , imageURL , newsUrl,author, date} = props;
     return (
       <div className='mx-5'><div className="card" id='news-card'>
       <img src={imageURL?imageURL:'https://media.newstrack.in/uploads/lifestyle-health/health-tips/Dec/28/big_thumb/2024-goals_658d4482ad7a9.JPG'} className="card-img-top" alt="..."/>
@@ -20,4 +17,5 @@ export default class NewsItem extends Component {
     </div></div>
     )
   }
-}
+  export default NewsItem;
+
